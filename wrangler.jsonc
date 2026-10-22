@@ -1,0 +1,15 @@
+{
+  // Aurapoli: il sito (public/) + le stanze online (Durable Object "Room")
+  "name": "aurapoli",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-21",
+  "assets": {
+    "directory": "./public"
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "ROOMS", "class_name": "Room" }]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["Room"] }
+  ]
+}
